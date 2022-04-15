@@ -1,14 +1,18 @@
 var tlist = {
-  1: ["清明", "2022-04-05"],
+  1: ["12生日", "2022-04-20"],
   2: ["劳动", "2022-05-01"],
-  3: ["端午", "2022-06-03"],
-  4: ["中秋", "2022-09-10"],
-  5: ["国庆", "2022-10-01"],
-  6: ["元旦", "2023-01-01"],
-  7: ["春节", "2023-01-22"],
-  8: ["元宵", "2023-02-05"],
-  9: ["清明", "2023-04-05"]
-  10:["生日", "2022-04-05"]
+  3: ["11楠楠生日", "2022-05-14"],
+  4: ["端午", "2022-06-03"],
+  5: ["WWDC22", "2022-06-07"],
+  6: ["生日", "2022-07-03"],
+  7: ["七夕", "2022-08-04"],
+  8: ["多多生日", "2022-08-20"],
+  9: ["中秋", "2022-09-10"],
+  10: ["国庆", "2022-10-01"],
+  11: ["元旦", "2023-01-01"],
+  12: ["春节", "2023-01-22"],
+  13: ["元宵", "2023-02-05"],
+  14: ["清明", "2023-04-05"]
 };
 let tnow = new Date();
 let tnowf =
@@ -69,39 +73,9 @@ function datenotice() {
     //console.log("当日已通知");
   }
 }
-
-//>图标依次切换乌龟、兔子、闹钟、礼品盒
-function icon_now(num){
-  if(num<=7 && num>3 ){
-    return "hare"
-  }else if(num<=3 && num>0){
-    return "timer"
-  }else if(num==0){
-    return "gift"
-  }else{
-    return "tortoise"
-  }
-}
-
 $done({
-title:title_random(tnumcount(Number(nowlist))),
-icon:icon_now(tnumcount(Number(nowlist))),
-content:tlist[nowlist][0]+":"+today(tnumcount(nowlist))+"天,"+tlist[Number(nowlist) + Number(1)][0] +":"+ tnumcount(Number(nowlist) + Number(1))+ "天,"+tlist[Number(nowlist) + Number(2)][0]+":"+tnumcount(Number(nowlist) + Number(2))+"天"
+title:"节假日倒计时",
+icon:"list.dash.header.rectangle",
+'icon-color': "#5AC8FA",
+content:tlist[nowlist][0]+"  :  "+today(tnumcount(nowlist))+"天\n"+tlist[Number(nowlist) + Number(1)][0] +"  :  "+ tnumcount(Number(nowlist) + Number(1))+ "天\n"+tlist[Number(nowlist) + Number(2)][0]+"  :  "+tnumcount(Number(nowlist) + Number(2))+"天"
 })
-
-function title_random(num){
-  let r = Math.floor((Math.random()*10)+1);
-  let dic = {
-    1:"距离放假，还要摸鱼多少天？",
-    2:"坚持住，就快放假啦！",
-    3:"上班好累呀，好想放假",
-    4:"努力，我还能加班24小时！",
-    5:"天呐，还要多久才放假呀？",
-    6:"躺平中，等放假",
-    7:"只有摸鱼才是赚老板的钱",
-    8:"一起摸鱼吧",
-    9:"摸鱼中，期待下一个假日",
-    10: "小乌龟慢慢爬"
-  };
-  return num==0?"节日快乐，万事大吉":dic[r]
-}
