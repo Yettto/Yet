@@ -1,4 +1,4 @@
-var list = ["中国","山东","上海","青岛"];
+var list = ["中国","山东","江西","青岛","上海"];
 const url = "https://view.inews.qq.com/g2/getOnsInfo?name=disease_h5";
 var ala="";
 function nowtime(){
