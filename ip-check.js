@@ -21,7 +21,7 @@ $httpClient.get(url, function(error, response, data){
   body = {
     title: "节点信息",
     content: `IP位置: ${emoji}${country} - ${city}\n运营商: ${isp}`,
-    icon: 'globe.asia.australia.fill' '#005CAF'
+    icon: 'globe.asia.australia.fill''#005CAF'
   }
   $done(body);
 });
