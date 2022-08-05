@@ -21,7 +21,7 @@ let startTime = timeTransform(dateNow,dateTime)
 if ($trigger == "button") await httpAPI("/v1/profiles/reload");
 
   $done({
-      title:"Surge Pro®",
+      title:"Surge Pro",
       content:
 	`启动时长: ${startTime}\n` +
         `订阅到期: 2023-03-12`,
