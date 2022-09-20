@@ -107,7 +107,7 @@ resolve(region)
 })
 })
 }
-let youtube_check_result = 'YouTube: '
+let youtube_check_result = 'Youtube: '
 await inner_check()
 .then((code) => {
 if (code === 'Not Available') {
@@ -155,7 +155,7 @@ reject('Error')
 })
 })
 }
-let netflix_check_result = 'Netflix♡: '
+let netflix_check_result = ' Netflix  : '
 await inner_check(81215567)
 .then((code) => {
 if (code = 'Not Found') {
