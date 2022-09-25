@@ -56,7 +56,7 @@ Promise.all([check_netflix(),check_youtube_premium()])
  let disney_result=""
     if (status==STATUS_COMING) {
         //console.log(1)
-        disney_result="Disney✢: 即将登陆~"+region.toUpperCase()
+        disney_result="Disney+: 即将登陆~"+region.toUpperCase()
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
