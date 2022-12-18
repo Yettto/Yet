@@ -1,11 +1,3 @@
-/*
- * 由@LucaLin233编写
- * 原脚本地址：https://raw.githubusercontent.com/LucaLin233/Luca_Conf/main/Surge/JS/stream-all.js
- * 由@Rabbit-Spec修改
- * 更新日期：2022.07.22
- * 版本：2.3
- */
-
 const REQUEST_HEADERS = {
     'User-Agent':
       'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36',
@@ -23,21 +15,6 @@ const STATUS_TIMEOUT = -1
 // 检测异常
 const STATUS_ERROR = -2
 
-function getFlagEmoji(code) {
-  const codePoints = code
-     .toUpperCase()
-    .split('')
-    .map((char) => 127397 + char.charCodeAt());
-  return String.fromCodePoint(...codePoints);
-}
-function getFlagEmoji(region) {
-  const codePoints = region
-     .toUpperCase()
-    .split('')
-    .map((char) => 127397 + char.charCodeAt());
-  return String.fromCodePoint(...codePoints);
-}
-
 const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36'
 
 
@@ -48,12 +25,11 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
       icon: 'lock.open.display',
       'icon-color': '#B5495B',
     }
-let [{ region, status }] = await Promise.all([testDisneyPlus()])
-    await 
-Promise.all([check_netflix(),check_youtube_premium()])
+  let [{ region, status }] = await Promise.all([testDisneyPlus()])
+    await Promise.all([check_youtube_premium(),check_netflix()])
       .then((result) => { 
          console.log(result)
- let disney_result=""
+let disney_result=""
     if (status==STATUS_COMING) {
         //console.log(1)
         disney_result="Disney+: 即将登陆~"+region.toUpperCase()
@@ -112,7 +88,7 @@ panel_result['content'] = content
       })
     }
   
-    let youtube_check_result = 'Youtube: '
+    let youtube_check_result = 'YouTube: '
   
     await inner_check()
       .then((code) => {
@@ -168,9 +144,9 @@ panel_result['content'] = content
       })
     }
   
-     let netflix_check_result = ' Netflix  : '
+    let netflix_check_result = '  Netflix : '
   
-    await inner_check(81215567)
+    await inner_check(80062035)
       .then((code) => {
         if (code === 'Not Found') {
           return inner_check(80018499)
