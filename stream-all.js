@@ -20,27 +20,27 @@ const UA = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (
 
   ;(async () => {
     let panel_result = {
-      title: '流媒体解锁检测 ',
+      title: '流媒体解锁检测',
       content: '',
-      icon: 'lock.open.display',
-      'icon-color': '#B5495B',
+      icon: 'play.tv.fill',
+      'icon-color': '#FF2D55',
     }
   let [{ region, status }] = await Promise.all([testDisneyPlus()])
     await Promise.all([check_youtube_premium(),check_netflix()])
       .then((result) => { 
          console.log(result)
-let disney_result=""
+ let disney_result=""
     if (status==STATUS_COMING) {
         //console.log(1)
         disney_result="Disney+: 即将登陆~"+region.toUpperCase()
       } else if (status==STATUS_AVAILABLE){
         //console.log(2)
         console.log(region)
-        disney_result="Disney+: 已经解锁 »» " +`${getFlagEmoji(region)}  ` + region.toUpperCase()
+        disney_result="Disney+ : 已经解锁 »» " +`${getFlagEmoji(region)}  ` + region.toUpperCase()
         // console.log(result["Disney"])
       } else if (status==STATUS_NOT_AVAILABLE) {
         //console.log(3)
-        disney_result="Disney+: 没有支持 🚫 "
+        disney_result="Disney+: 未支持 🚫 "
       } else if (status==STATUS_TIMEOUT) {
         disney_result="Disney+: 检测超时 🚦"
       }
