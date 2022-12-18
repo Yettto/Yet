@@ -1,11 +1,3 @@
-/*
- * 由@LucaLin233编写
- * 原脚本地址：https://raw.githubusercontent.com/LucaLin233/Luca_Conf/main/Surge/JS/stream-all.js
- * 由@Rabbit-Spec修改
- * 更新日期：2022.07.22
- * 版本：2.3
- */
-
 const REQUEST_HEADERS = {
     'User-Agent':
       'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/94.0.4606.61 Safari/537.36',
@@ -167,9 +159,9 @@ panel_result['content'] = content
       })
     }
   
-     let netflix_check_result = 'Netflix   : '
+    let netflix_check_result = 'Netflix: '
   
-    await inner_check(81215567)
+    await inner_check(80062035)
       .then((code) => {
         if (code === 'Not Found') {
           return inner_check(80018499)
@@ -198,7 +190,6 @@ panel_result['content'] = content
   
     return netflix_check_result
   }
-
   async function testDisneyPlus() {
     try {
         let { region, cnbl } = await Promise.race([testHomePage(), timeout(7000)])
