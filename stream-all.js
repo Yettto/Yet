@@ -159,7 +159,7 @@ panel_result['content'] = content
       })
     }
   
-    let netflix_check_result = 'Netflix: '
+    let netflix_check_result = ' Netflix  : '
   
     await inner_check(80062035)
       .then((code) => {
