@@ -125,7 +125,7 @@ panel_result['content'] = content
         if (code === 'Not Found') {
           return inner_check(80018499)
         }
-        netflix_check_result += '已完整解锁，区域: ' + code.toUpperCase()
+        netflix_check_result += '完整解锁 »» '  +`${getFlagEmoji(code)}  ` + code.toUpperCase()
         return Promise.reject('BreakSignal')
       })
       .then((code) => {
@@ -133,7 +133,7 @@ panel_result['content'] = content
           return Promise.reject('Not Available')
         }
   
-        netflix_check_result += '仅解锁自制剧，区域: ' + code.toUpperCase()
+        netflix_check_result += '仅自制剧，区域: ' + `${getFlagEmoji(code)}  ` + code.toUpperCase()
         return Promise.reject('BreakSignal')
       })
       .catch((error) => {
@@ -141,10 +141,10 @@ panel_result['content'] = content
           return
         }
         if (error === 'Not Available') {
-          netflix_check_result += '该节点不支持解锁'
+          netflix_check_result += '该节点不支持解锁🚫'
           return
         }
-        netflix_check_result += '检测失败，请刷新面板'
+        netflix_check_result += '检测失败，请刷新面板🔄'
       })
   
     return netflix_check_result
