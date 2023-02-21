@@ -25,8 +25,8 @@ let content = ''
   const end = Date.now()
   const duration = (end - time || start) / 1000
   const speed = mb / duration
-  title = `网络速率`
-  content = `${round(speed * 8, 2)} Mbps | ${round(speed, 2)} MB/s\n耗时: ${round(duration, 2)}s | 时间: ${new Date().toTimeString().split(' ')[0]}`
+  title = `节点速率`
+  content = `${round(speed * 8, 2)} Mbps | ${round(speed, 2)} MB/s\n耗时: ${round(duration, 2)}s  | 时间: ${new Date().toTimeString().split(' ')[0]}`
   if ($.isTile()) {
     await notify('网络速率', '面板', '查询完成')
   } else if(!$.isPanel()) {
