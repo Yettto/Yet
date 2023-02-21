@@ -20,7 +20,7 @@
   if (resetDayLeft || expire) {
     if (resetDayLeft && expire && expire !== "false") {
       if (/^[\d.]+$/.test(expire)) expire *= 1000;
-      content.push(`重置：还有${resetDayLeft}天 \t|${formatTime(expire)}`);
+      content.push(`重置：${resetDayLeft}天 \t|  ${formatTime(expire)}`);
     } else if (resetDayLeft && !expire) {
       content.push(`重置：${resetDayLeft}天`);
     } else if (!resetDayLeft && expire) {
@@ -152,5 +152,5 @@ function formatTime(time) {
   let year = dateObj.getFullYear();
   let month = dateObj.getMonth() + 1;
   let day = dateObj.getDate();
-  return "到期：" + year + "年" + month + "月" + day + " ";
+  return "到期：" + year + "/" + month + "/" + day + " ";
 }
