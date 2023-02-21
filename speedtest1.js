@@ -30,7 +30,7 @@ let content = ''
   if ($.isTile()) {
     await notify('网络速率', '面板', '查询完成')
   } else if(!$.isPanel()) {
-    await notify('网络速率', title, content)
+    await notify('节点速率', title, content)
   }
 })()
   .catch(async e => {
