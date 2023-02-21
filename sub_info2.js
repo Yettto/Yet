@@ -36,7 +36,7 @@
   minutes = minutes > 9 ? minutes : "0" + minutes;
 
   $done({
-    title: `${args.title} → ${bytesToSize(total)} | ${hour}:${minutes}`,
+    title: `${args.title}➾${bytesToSize(total)} | ${hour}:${minutes}`,
     content: content.join("\n"),
     icon: args.icon || "airplane.circle",
     "icon-color": args.color || "#007aff",
@@ -152,5 +152,5 @@ function formatTime(time) {
   let year = dateObj.getFullYear();
   let month = dateObj.getMonth() + 1;
   let day = dateObj.getDate();
-  return "到期：" + year + "/" + month + "/" + day + " ";
+  return "到期：" + year + "." + month + "." + day + " ";
 }
