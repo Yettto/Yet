@@ -10,7 +10,7 @@ $httpClient.get(url, function(error, response, data){
     let ip = jsonData.query
   body = {
     title: "节点信息",
-    content: `IP信息：${ip}\n运营商：${isp}\n所在地：${emoji}｜${country} - ${city},${citys}`,
+    content: `IP信息：${ip}\n运营商：${isp}\n所在地：${emoji} ${country}-${city},${citys}`,
     icon: "bonjour",
            "icon-color": "#3A8FB7",
   }
