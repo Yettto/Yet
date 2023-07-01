@@ -30,7 +30,7 @@ const v4IP = v4.primaryAddress;
             + (wifi.ssid ? `路由器地址：${router}\n` : "")
             + `外部 IP：${externalIP}`,
         icon: wifi.ssid ? 'wifi' : 'simcard',
-      'icon-color': wifi.ssid ? '#005CAF' : '#F9BF45'
+      'icon-color': wifi.ssid ? '#3A8FB7' : '#3A8FB7'
     };
     $.done(body);
 })();
