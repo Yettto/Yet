@@ -1,0 +1,12 @@
+ {
+    "name": "Yetto icon",
+    "description": "self-use",
+    "time": "2024-08-08",
+    "icons": [
+      {"name":"globe", "url":"https://raw.githubusercontent.com/Yettto/Yet/main/globe_gaitubao_icon.png"},
+      {"name":"sunrise", "url":"https://raw.githubusercontent.com/Yettto/Yet/main/sunrise-waveskinny_icon.png"},
+
+
+
+    ]
+ }
